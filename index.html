@@ -36,18 +36,21 @@
         <div class="weather-app-data">
           <div>
             <h1 class="weather-app-city" id="app-city"></h1>
-              <p class="weather-app-city-details">
-                <span id="time"></span>, <span id="weather-description"></span>
-                <br />
-                Humidity:<strong id="app-humidity"></strong>, Wind:<strong id="wind-speed"></strong>
-              </p>
-            </div>
-            <div class="weather-app-temperature-container">
-              <div id="icon"></div>
-              <div class="weather-app-temperature" id="app-temperature"></div>
-              <div class="weather-app-unit">°</div>
-            </div>
+            <p class="weather-app-city-details">
+              <span id="time"></span>, <span id="weather-description"></span>
+              <br />
+              Humidity:<strong id="app-humidity"></strong>, Wind:<strong
+                id="wind-speed"
+              ></strong>
+            </p>
           </div>
+          <div class="weather-app-temperature-container">
+            <div id="icon"></div>
+            <div class="weather-app-temperature" id="app-temperature"></div>
+            <div class="weather-app-unit">°</div>
+          </div>
+        </div>
+        <div class="weather-forecast" id="forecast"></div>
       </main>
       <footer>
         This project was coded by
@@ -62,7 +65,6 @@
           >hosted on Netlify</a
         >
       </footer>
-    </div>
     </div>
     <script src="src/index.js"></script>
   </body>

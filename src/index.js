@@ -51,7 +51,34 @@ function initiateSearchSubmit(event) {
   let searchInput = document.querySelector("#search-form-input");
   citySearch(searchInput.value);
 }
+
+function showForecast() {
+  let days = ["Sat", "Sun", "Mon", "Tue", "Wed"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+      <div class="weather-forecast-days">
+       <div class="weather-forecast-date">${day}</div>
+       <div class="weather-forecast-icon">⛅</div>
+       <div class="weather-forecast-temps">
+        <div class="weather-forecast-temp">
+         <strong>13°</strong>
+        </div>
+        <div class="weather-forecast-temp">8°</div>
+       </div>
+      </div>
+      `;
+  });
+
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", initiateSearchSubmit);
 
 citySearch("Texas");
+showForecast();
